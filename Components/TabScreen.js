@@ -30,5 +30,6 @@ export default class TabsExample extends Component {
 		);
 	}
 }
+//수정
 
 export default TabsExample;
