@@ -18,7 +18,7 @@ function DataItem({ article, handleClick }) {
         <Thumbnail square source={{ uri: article.urlToImage || 'https://upload.wikimedia.org/wikipedia/commons/0/0a/No-image-available.png' }} />
       </Left>
       <Body>
-        <Text numberOfLines={2}>{article.title}</Text>
+        <Text numberOfLines={2} onPress={viewModal}>{article.title}</Text>
         <Text note numberOfLines={2}>{article.description}</Text>
 
         {/* 출처, 시간 표시 */}
@@ -27,10 +27,8 @@ function DataItem({ article, handleClick }) {
           <Text note>{moment(article.publishedAt || moment.now).fromNow()}</Text>
         </View>
       </Body>
+
       <Right>
-        <Button transparent onPress={viewModal}>
-          <Text>보기</Text>
-        </Button>
       </Right>
     </ListItem>
   );
