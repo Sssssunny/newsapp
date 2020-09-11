@@ -5,7 +5,19 @@ import { WebView } from 'react-native-webview';
 
 export default function ModalView({ viewModal, modalArticleData, handleClose }) {
   
+  // 높이 구하기
   const webViewHeight = Dimensions.get('window').height - 100;
+  
+
+  // 공유
+  const handleShare = () => {
+    const {title, url} = modalArticleData;
+    const message = `${title}\n\nRead More @${url}\n\nShared via RN News App`;
+    return Share.share(
+      {title, message, url: message},
+      {dialogTitle: `Share ${title}`}
+    );
+  };
   
   return (
     <Modal
@@ -24,7 +36,7 @@ export default function ModalView({ viewModal, modalArticleData, handleClose }) 
             <Title>기사 제목</Title>
           </Body>
           <Right>
-            <Button transparent>
+            <Button onPress={handleShare} transparent>
               <Icon name="share" />
             </Button>
           </Right>
