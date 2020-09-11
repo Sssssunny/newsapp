@@ -13,14 +13,12 @@ function DataItem({ article }) {
         <Text note numberOfLines={2}>{article.description}</Text>
 
         {/* 출처, 시간 표시 */}
-        <Text numberOfLines={2}>{article.title}</Text>
+        {/* <Text numberOfLines={2}>{article.title}</Text>
         <Text note numberOfLines={2}>{article.description}</Text>
         <View style={{ flex: 1, flexDirection: 'row', marginTop: 10 }}>
-          {/* 출처 */}
           <Text note>{article.source.name}  |  </Text>
-          {/* 시간 */}
           <Text note>{moment(article.publishedAt || moment.now).fromNow()}</Text>
-        </View>
+        </View> */}
       </Body>
       <Right>
         <Button transparent>
