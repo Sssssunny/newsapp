@@ -16,13 +16,13 @@ export default class TabsScreen extends Component {
 
 				<Header hasTabs />
 				<Tabs>
-					<Tab heading="일반">
+					<Tab heading="전체">
 						<TabOne />
 					</Tab>
-					<Tab heading="Tab2">
+					<Tab heading="과학">
 						<TabTwo />
 					</Tab>
-					<Tab heading="Tab3">
+					<Tab heading="건강">
 						<TabThree />
 					</Tab>
 				</Tabs>

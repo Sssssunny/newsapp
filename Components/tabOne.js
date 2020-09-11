@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Container, Content, List } from 'native-base';
 import { View, Text, ActivityIndicator } from 'react-native';
-import { getArticles } from '../api/news';
+import { getArticlesGeneral } from '../api/news';
 import DataItem from './DataItem';
 
 function TabOne() {
@@ -13,7 +13,7 @@ function TabOne() {
 	// useEffect 를 통해 초기 랜더링 될때만 데이터를 호출한다.
 	useEffect(() => {
 		async function get_articles() {
-			setArticles(await getArticles());
+			setArticles(await getArticlesGeneral());
 			setIsLoading(false);
 		}
 
