@@ -16,21 +16,21 @@ export default function TabScreen() {
 				<Tab
 					tabStyle={{ backgroundColor: '#B0C4DE' }}
 					activeTabStyle={{ backgroundColor: '#B0C4DE' }}
-					heading="TabOne"
+					heading="연예"
 				>
 					<TabOne />
 				</Tab>
 				<Tab
 					tabStyle={{ backgroundColor: '#B0C4DE' }}
 					activeTabStyle={{ backgroundColor: '#B0C4DE' }}
-					heading="TabTwo"
+					heading="과학"
 				>
 					<TabTwo />
 				</Tab>
 				<Tab
 					tabStyle={{ backgroundColor: '#B0C4DE' }}
 					activeTabStyle={{ backgroundColor: '#B0C4DE' }}
-					heading="TabThree"
+					heading="건강"
 				>
 					<TabThree />
 				</Tab>
