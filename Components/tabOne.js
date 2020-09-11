@@ -45,7 +45,7 @@ export default function TabOne() {
 			<List
 				dataArray={articles}
 				renderRow={(article) => {
-					return <DataItem article={article} handleClick={handleClick} handleClose={handleClose} />
+					return <DataItem article={article} handleClick={handleClick} />
 				}}
 			/>
 		);
