@@ -2,7 +2,16 @@ import React from 'react';
 import { ListItem, Thumbnail, View, Text, Left, Body, Right, Button } from 'native-base';
 import moment from 'moment';
 
-function DataItem({ article }) {
+function DataItem({ article, handleClick }) {
+
+  // 보기 버튼 클릭시
+  const viewModal = () => {
+    handleClick({
+      title: article.title,
+      url: article.url
+    });
+  }
+
   return (
     <ListItem thumbnail>
       <Left>
@@ -19,7 +28,7 @@ function DataItem({ article }) {
         </View>
       </Body>
       <Right>
-        <Button transparent>
+        <Button transparent onPress={viewModal}>
           <Text>보기</Text>
         </Button>
       </Right>
