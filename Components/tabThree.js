@@ -4,7 +4,7 @@ import { View, Text, ActivityIndicator } from 'react-native';
 import { getArticlesHealth } from '../api/news';
 import DataItem from './DataItem';
 
-function TabThree() {
+export default function TabThree() {
 
 	const [isLoading, setIsLoading] = useState(true);
 	const [articles, setArticles] = useState([]);
@@ -40,5 +40,3 @@ function TabThree() {
 		</Container>
 	);
 };
-
-export default TabThree;

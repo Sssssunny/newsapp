@@ -4,7 +4,7 @@ import { View, Text, ActivityIndicator } from 'react-native';
 import { getArticlesEntertainment } from '../api/news';
 import DataItem from './DataItem';
 
-function TabOne() {
+export default function TabOne() {
 
 	const [isLoading, setIsLoading] = useState(true);
 	const [articles, setArticles] = useState([]);
@@ -40,5 +40,3 @@ function TabOne() {
 		</Container>
 	);
 };
-
-export default TabOne;
