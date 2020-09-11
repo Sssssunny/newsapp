@@ -9,7 +9,7 @@ export default function TabScreen() {
 		<Container>
 			<Header style={{ backgroundColor: '#B0C4DE' }} hasTabs>
 				<Body>
-					<Title style={{ color: 'white' }}>News App</Title>
+					<Title style={{ color: '#4682B4', fontSize: '25px' }}>News App</Title>
 				</Body>
 			</Header>
 			<Tabs tabBarUnderlineStyle={{ backgroundColor: 'white' }}>
