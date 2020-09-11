@@ -1,9 +1,9 @@
-import { article_url, cate_ge, cate_sc, cate_he, country_code, __api_key } from '../config/rest_config';
+import { article_url, cate_et, cate_sc, cate_he, country_code, __api_key } from '../config/rest_config';
 import axios from 'axios';
 
-export const getArticlesGeneral = async () => {
+export const getArticlesEntertainment = async () => {
   try {
-    const articles = await axios.get(`${article_url}?country=${country_code}&category=${cate_ge}&apiKey=${__api_key}`);
+    const articles = await axios.get(`${article_url}?country=${country_code}&category=${cate_et}&apiKey=${__api_key}`);
     return articles.data.articles;
   } catch (error) {
     throw error;
