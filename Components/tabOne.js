@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { Container, View, Text, Content, List, ActivityIndicator } from 'native-base';
+import { Container, Content, List } from 'native-base';
+
+// ActivityIndicator 는 react-native 에서 호출.
+import { ActivityIndicator, View, Text } from 'react-native';
 import { getArticles } from '../api/news';
 import DataItem from './DataItem';
 
