@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { Container, Header, Body, Title, Text, Content, Tab, Tabs } from 'native-base';
-import { Tab1 } from './tabOne';
-import Tab2 from './tabTwo';
-import Tab3 from './tabThree';
+import TabOne from './TabOne';
+import TabTwo from './TabTwo';
+import TabThree from './TabThree';
 
-export default class TabsExample extends Component {
+export default class TabsScreen extends Component {
 	render() {
 		return (
 			<Container>
@@ -17,19 +17,16 @@ export default class TabsExample extends Component {
 				<Header hasTabs />
 				<Tabs>
 					<Tab heading="일반">
-						<Tab1 />
+						<TabOne />
 					</Tab>
 					<Tab heading="Tab2">
-						<Tab2 />
+						<TabTwo />
 					</Tab>
 					<Tab heading="Tab3">
-						<Tab3 />
+						<TabThree />
 					</Tab>
 				</Tabs>
 			</Container>
 		);
 	}
 }
-//수정
-
-export default TabsExample;

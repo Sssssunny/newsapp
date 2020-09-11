@@ -1,7 +1,7 @@
 import React from 'react';
 import { Text } from 'react-native';
 
-function tabThree() {
+function TabThree() {
 	return (
 		<>
 			<Text>페이지 3</Text>
@@ -9,4 +9,4 @@ function tabThree() {
 	);
 };
 
-export default tabThree;
+export default TabThree;

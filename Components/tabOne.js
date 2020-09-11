@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { Container, View, Text, Content, List, ActivityIndicator } from 'native-base';
+import { Container, Content, List } from 'native-base';
+import { View, Text, ActivityIndicator } from 'react-native';
 import { getArticles } from '../api/news';
 import DataItem from './DataItem';
 
-function tabOne() {
+function TabOne() {
 
 	// 로딩여부 와 뉴스 정보를 state 에 담는다.
 	const [isLoading, setIsLoading] = useState(true);
@@ -42,4 +43,4 @@ function tabOne() {
 	);
 };
 
-export default tabOne;
+export default TabOne;
