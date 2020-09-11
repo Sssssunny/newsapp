@@ -7,21 +7,31 @@ import TabThree from './TabThree';
 export default function TabScreen() {
 	return (
 		<Container>
-			<Header hasTabs>
+			<Header style={{ backgroundColor: '#B0C4DE' }} hasTabs>
 				<Body>
-					<Title>News</Title>
+					<Title style={{ color: 'white' }}>News App</Title>
 				</Body>
 			</Header>
-
-			<Header hasTabs />
-			<Tabs>
-				<Tab heading="연예">
+			<Tabs tabBarUnderlineStyle={{ backgroundColor: 'white' }}>
+				<Tab
+					tabStyle={{ backgroundColor: '#B0C4DE' }}
+					activeTabStyle={{ backgroundColor: '#B0C4DE' }}
+					heading="TabOne"
+				>
 					<TabOne />
 				</Tab>
-				<Tab heading="과학">
+				<Tab
+					tabStyle={{ backgroundColor: '#B0C4DE' }}
+					activeTabStyle={{ backgroundColor: '#B0C4DE' }}
+					heading="TabTwo"
+				>
 					<TabTwo />
 				</Tab>
-				<Tab heading="건강">
+				<Tab
+					tabStyle={{ backgroundColor: '#B0C4DE' }}
+					activeTabStyle={{ backgroundColor: '#B0C4DE' }}
+					heading="TabThree"
+				>
 					<TabThree />
 				</Tab>
 			</Tabs>
