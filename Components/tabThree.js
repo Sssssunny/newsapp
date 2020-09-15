@@ -1,14 +1,23 @@
 import React, { useState, useEffect } from 'react';
 import { Container, Content, List } from 'native-base';
 import { View, Text, ActivityIndicator } from 'react-native';
-import { getArticlesHealth } from '../api/news';
+import { useDispatch, useSelector } from 'react-redux';
 import DataItem from './DataItem';
 import ModalView from './ModalView';
 
-export default function TabOne() {
+export default function TabThree() {
 
-	const [isLoading, setIsLoading] = useState(true);
-	const [articles, setArticles] = useState([]);
+	const dispatch = useDispatch();
+	const { isLoading, articles } = useSelector((state) => {
+		return {
+			isLoading: state.isLoading,
+			articles: state.health,
+		};
+	});
+
+	useEffect(() => {
+		dispatch({ type: "CLICK", category: "health"});
+	}, []);
 
 	// 모달을 보여는 여부를 담을 상태를 설정한다.
 	const [viewModal, setModalView] = useState(false);
@@ -26,15 +35,6 @@ export default function TabOne() {
 		setModalView(false);
 		setModalArticleData({});
 	};
-
-	useEffect(() => {
-		async function get_articles() {
-			setArticles(await getArticlesHealth());
-			setIsLoading(false);
-		}
-
-		get_articles();
-	}, []);
 
 	const pageView = isLoading ? (
 		<View>
