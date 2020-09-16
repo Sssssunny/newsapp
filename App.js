@@ -1,6 +1,7 @@
 import React from 'react';
 import { Text, View, StyleSheet } from 'react-native';
 import TabScreen from './Components/TabScreen';
+import Login from './pages/Login';
 import { Provider } from 'react-redux';
 import { store } from './store';
 
@@ -17,7 +18,8 @@ export default function App() {
   return (
     <Provider store={store}>
       <View style={styles.container}>
-        <TabScreen />
+        {/* <TabScreen /> */}
+        <Login />
       </View>
     </Provider>
   );
